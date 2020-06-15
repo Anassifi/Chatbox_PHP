@@ -1,8 +1,8 @@
 ## Chat box Projects : 
 
-`Link discord channel` :  https://discord.gg/ncsuKmy.
+`Made using` :  PHP/MYSQL.
 
-`Use issues to read and github project to view self progression`
+`A chatbox where user and message entered get insert into a database`
 
-`The main issues in this repository will contain the directives and links for documentation and practicing`
+`And get printed into the front end`
 
