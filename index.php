@@ -2,10 +2,8 @@
 
 	include 'database.php';
 
-	$sql = "SELECT messages, username, text_time FROM shouts";
+	$sql = "SELECT messages, username, text_time FROM `shouts`";
 	$result = mysqli_query($con, $sql);
-
-	include 'process.php';
 
 ?>
 
@@ -32,10 +30,13 @@
 			</div>
 			<div id="input">
 				<form method="post" action="process.php">
+					<?php if(isset($_GET["error"])) : ?>
+						<div class="error"><?php echo $_GET["error"]; ?></div>
+					<?php endif; ?>
 					<input type="text" name="user" placeholder="Enter Your Name" />
 					<input type="text" name="message" placeholder="Enter A Message" />
 					<br />
-					<input class="shout-btn" type="submit" name="submit" value="Throw it" />
+					<input class="shout-btn" type="submit" name="submit" value="Shout it" />
 				</form>
 			</div>
 		</div>
